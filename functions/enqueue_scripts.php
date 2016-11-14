@@ -39,11 +39,10 @@ function sandbox_enqueue_scripts() {
   );
 
   // CSS
-  $css_file = sandbox_is_local() ? '/style.full.css' : '/style.css';
   $css_version = filemtime( get_stylesheet_directory() . '/style.css');
   wp_enqueue_style(
     'sandbox-stylesheet',
-    get_stylesheet_directory_uri() . $css_file,
+    get_stylesheet_directory_uri() . '/style.css',
     array(),
     $css_version,
     'all'

@@ -1,0 +1,165 @@
+{
+    "key": "group_582a116f13b93",
+    "title": "Link Sets",
+    "fields": [
+        {
+            "key": "field_582a1181d6061",
+            "label": "Link Set",
+            "name": "link_set",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": "",
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Link Set",
+            "sub_fields": [
+                {
+                    "key": "field_582a1194d6062",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "The name of the project, e.g. \"Film\" or \"N-A-R-C\".",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_582a11a0d6063",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "The label of category of project, e.g. \"Portfolio\" or \"Music\".",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_582a131330244",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "url",
+                    "instructions": "Where this link set should link to. e.g. \"http:\/\/newagerealchange.com\/\"",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_582a11d3d6064",
+                    "label": "Images",
+                    "name": "images",
+                    "type": "gallery",
+                    "instructions": "Images for link hover effect.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min": "",
+                    "max": "",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_582a11e8d6065",
+                    "label": "Videos",
+                    "name": "videos",
+                    "type": "repeater",
+                    "instructions": "Videos for link hover effect. Paste the video URL in mp4 format. You can get the video URL by uploading a video to the Wordpress media gallery, then viewing that media item and copying the source URL.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": "",
+                    "max": "",
+                    "layout": "table",
+                    "button_label": "Add Video",
+                    "sub_fields": [
+                        {
+                            "key": "field_582a1232d6066",
+                            "label": "Video URL",
+                            "name": "video_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-link-sets"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1479156882
+}

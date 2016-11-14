@@ -3,7 +3,8 @@
 ///////////////////////////////////////////////////
 
 // Font stacks
-$font-stack__regular : sans-serif;
+$font-stack__regular : 'univers-extended', sans-serif;
+$font-stack__heavy : 'univers-black-extended', sans-serif;
 
 ///////////////////////////////////////////////////
 // Typography definitions
@@ -12,7 +13,32 @@ $font-stack__regular : sans-serif;
 // Regular
 @mixin font--regular {
   font-family: $font-stack__regular;
-  font-size:      1.8rem;
-  line-height:    2.1rem;
-  letter-spacing: 0.025rem;
+  font-size:      32px;
+  line-height:    1.4;
+  letter-spacing: 0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.75);
+}
+
+@mixin font--title {
+  font-family: $font-stack__heavy;
+  font-size:      50px;
+  line-height:    1.1;
+  letter-spacing: 0;
+  text-shadow: 0 0 20px $white;
+}
+
+@mixin font--regular-title {
+  font-family: $font-stack__regular;
+  font-size:      50px;
+  line-height:    1.1;
+  letter-spacing: 0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.75);
+}
+
+@mixin font--heavy-body-copy {
+  font-family: $font-stack__heavy;
+  font-size:      32px;
+  line-height:    1.4;
+  letter-spacing: 0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.75);
 }

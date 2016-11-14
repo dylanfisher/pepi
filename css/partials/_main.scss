@@ -1,3 +1,148 @@
 //
 // Main
 //
+
+html {
+  background: $black;
+  color: $white;
+  text-align: center;
+}
+
+.link-set__item {
+  margin-bottom: 1em;
+  transition: opacity 0.5s;
+
+  .link-set-active & {
+    opacity: 0.4;
+
+    &.active,
+    &.link-set__item--primary {
+      opacity: 1;
+    }
+  }
+}
+
+.link-set__item--primary {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.link-set__item__title,
+.link-set__item__label {
+  display: inline-block;
+}
+
+.link-set__item__title {
+  @include font--title;
+
+  &:after {
+    content: '\25CF';
+    margin: 0 6px;
+    display: inline-block;
+    font-size: 11px;
+    vertical-align: middle;
+  }
+}
+
+.link-set__item--single {
+  & > .link-set__item__title {
+    &:after {
+      content: none;
+      margin: 0;
+    }
+  }
+}
+
+.link-set__item__label {
+  @include font--regular-title;
+}
+
+.link-set__media {
+  display: none;
+}
+
+.active-media-wrapper {
+  position: relative;
+  z-index: -1;
+
+  video {
+    object-fit: cover;
+  }
+}
+
+.active-media-wrapper video,
+.active-media-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s;
+}
+
+.active-media-image {
+  background-size: cover;
+  background-position: center center;
+}
+
+.inactive {
+  opacity: 0;
+}
+
+.link-set__item--contact {
+  cursor: pointer;
+}
+
+.contact-info {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: $black;
+  min-height: 100vh;
+  width: 100%;
+  transition: opacity 0.5s;
+
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.contact-info__close {
+  position: absolute;
+  top: 3em;
+  right: 50px;
+}
+
+.contact-info__close-button {
+  font-family: sans-serif;
+  font-size: 50px;
+  line-height: 0.6;
+  text-shadow: none;
+  cursor: pointer;
+}
+
+.contact-info__content {
+  @include font--heavy-body-copy;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.contact-info__links {
+  margin-bottom: 1em;
+}
+
+.contact-info__links__link {
+  & + .contact-info__links__link {
+    &:before {
+      content: '\25CF';
+      margin: 0 6px;
+      display: inline-block;
+      font-size: 11px;
+      vertical-align: middle;
+    }
+  }
+}
