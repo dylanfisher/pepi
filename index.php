@@ -25,7 +25,7 @@
           <?php $images = get_sub_field( 'images', 'option' ); ?>
           <?php if ( $images ): ?>
             <?php foreach ( $images as $image ): ?>
-              <img src="<?php echo $image["url"]; ?>">
+              <img src="<?php echo $image['sizes']['large']; ?>">
             <?php endforeach; ?>
           <?php endif; ?>
 
