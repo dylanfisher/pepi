@@ -32,6 +32,21 @@
 
   <link rel="icon" type="image/png" href="<?php echo get_bloginfo('template_url'); ?>/images/favicon.png">
   <?php wp_head(); ?>
+
+  <style>
+    <?php if ( get_field( 'background_color', 'option' ) ): ?>
+      html {
+        background-color: <?php the_field( 'background_color', 'option' ); ?>;
+      }
+    <?php endif; ?>
+
+    <?php if ( get_field( 'foreground_color', 'option' ) ): ?>
+      html,
+      a {
+        color: <?php the_field( 'foreground_color', 'option' ); ?>;
+      }
+    <?php endif; ?>
+  </style>
 </head>
 <body <?php body_class(); ?>>
   <?php get_template_part('partials/utilities/ie8_notice'); ?>
