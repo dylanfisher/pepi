@@ -39,10 +39,15 @@
     <?php endwhile; ?>
   <?php endif; ?>
 
-  <li class="link-set__item link-set__item--single link-set__item--contact">
+  <li class="link-set__item link-set__item--contact <?php echo get_field( 'contact_link_label', 'option' ) ? '' : 'link-set__item--single'; ?>">
     <span class="link-set__item__title">
-      Contact
+      <?php the_field( 'contact_link_title', 'option' ); ?>
     </span>
+    <?php if ( get_field( 'contact_link_label', 'option' ) ): ?>
+      <span class="link-set__item__label">
+        <?php the_field( 'contact_link_label', 'option' ); ?>
+      </span>
+    <?php endif; ?>
     <div class="contact-info">
       <div class="contact-info__close">
         <div class="contact-info__close-button">&times;</div>

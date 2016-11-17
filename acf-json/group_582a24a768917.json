@@ -3,6 +3,48 @@
     "title": "Contact",
     "fields": [
         {
+            "key": "field_582d26b21cdaf",
+            "label": "Contact Link Title",
+            "name": "contact_link_title",
+            "type": "text",
+            "instructions": "The title for the popup contact info button.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Contact",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_582d26dc1cdb0",
+            "label": "Contact Link Label",
+            "name": "contact_link_label",
+            "type": "text",
+            "instructions": "The label for the contact info popup button. Optional.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
             "key": "field_582a24b4b8958",
             "label": "Content",
             "name": "content",
@@ -101,5 +143,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1479157336
+    "modified": 1479354125
 }
