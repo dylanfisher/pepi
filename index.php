@@ -13,7 +13,7 @@
   <?php if ( have_rows( 'link_set', 'option' ) ): ?>
     <?php while ( have_rows( 'link_set', 'option' ) ): the_row(); ?>
       <li class="link-set__item">
-        <a href="<?php the_sub_field( 'link' ); ?>" class="blank-link">
+        <a href="<?php the_sub_field( 'link' ); ?>" class="blank-link" target="_blank">
           <span class="link-set__item__title">
             <?php the_sub_field( 'title' ); ?>
           </span>
@@ -68,7 +68,7 @@
       <div class="contact-info__links">
         <?php if ( have_rows( 'contact_links', 'option' ) ): ?>
           <?php while ( have_rows( 'contact_links', 'option' ) ): the_row(); ?>
-            <a href="<?php the_sub_field( 'url' ); ?>" class="contact-info__links__link default-link"><?php the_sub_field( 'label' ); ?></a>
+            <a href="<?php the_sub_field( 'url' ); ?>" class="contact-info__links__link default-link" target="_blank"><?php the_sub_field( 'label' ); ?></a>
           <?php endwhile; ?>
         <?php endif; ?>
       </div>
