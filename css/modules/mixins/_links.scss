@@ -1,0 +1,13 @@
+@mixin blank-link {
+  text-decoration: none;
+  border-bottom: 0;
+}
+.blank-link { @include blank-link; }
+
+
+@mixin default-link {
+  text-decoration: none;
+  text-shadow: 0 0 20px $white;
+  border-bottom: 1px solid $white;
+}
+.default-link { @include default-link; }

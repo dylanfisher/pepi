@@ -29,7 +29,7 @@ html {
 
 .link-set__item__title,
 .link-set__item__label {
-  display: inline-block;
+  display: inline;
 }
 
 .link-set__item__title {
@@ -41,6 +41,7 @@ html {
     display: inline-block;
     font-size: 11px;
     vertical-align: middle;
+    -webkit-font-smoothing: auto;
   }
 }
 
@@ -89,7 +90,7 @@ html {
   opacity: 0;
 }
 
-.link-set__item--contact {
+.link-set__item--contact .link-set__item__title {
   cursor: pointer;
 }
 
@@ -122,32 +123,91 @@ html {
   }
 }
 
-.contact-info__close-button {
-  font-family: sans-serif;
-  font-size: 50px;
+.close-button {
+  @include blank-link;
+  font-size: 70px;
   line-height: 0.6;
   text-shadow: none;
   cursor: pointer;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 1);
 }
 
-.contact-info__content {
-  @include font--heavy-body-copy;
-  max-width: 840px;
+.contact-info__content,
+.entry-content {
+  @include font--regular-body-copy;
+  max-width: $content-max-width;
   margin: 0 auto;
 }
 
 .contact-info__links {
+  margin-top: 3em;
   margin-bottom: 1em;
 }
 
 .contact-info__links__link {
-  & + .contact-info__links__link {
-    &:before {
-      content: '\25CF';
-      margin: 0 6px;
-      display: inline-block;
-      font-size: 11px;
-      vertical-align: middle;
+  position: relative;
+  margin: 0 15px;
+  display: block;
+  border-bottom: 0;
+  margin-bottom: 5px;
+
+  @include breakpoint(sm) {
+    & + .contact-info__links__link {
+      &:before {
+        content: '\25CF';
+        margin: 0 6px;
+        font-size: 11px;
+        position: absolute;
+        top: 50%;
+        left: -29px;
+        margin-top: -7px;
+      }
     }
+  }
+
+  @include breakpoint(sm) {
+    display: inline-block;
+    border-bottom: 1px solid;
+  }
+}
+
+// News
+.news-items {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.single-news_item {
+  margin-bottom: 3em;
+
+  .sandbox-image {
+    max-height: 600px;
+    width: auto;
+    margin-bottom: 3em;
+  }
+}
+
+.entry-content {
+  margin-bottom: 3em;
+
+  a {
+    @include default-link;
+  }
+}
+
+.post-title-wrapper {
+  position: relative;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.single-post-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  @include breakpoint(sm) {
+    top: 30px;
+    right: 50px;
   }
 }

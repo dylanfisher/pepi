@@ -10,12 +10,9 @@
 }
 
 @font-face {
-  font-family: 'univers-black-extended';
-  src: url('fonts/univers-blackext-webfont.eot');
-  src: url('fonts/univers-blackext-webfont.eot?#iefix') format('embedded-opentype'),
-       url('fonts/univers-blackext-webfont.woff') format('woff'),
-       url('fonts/univers-blackext-webfont.ttf') format('truetype'),
-       url('fonts/univers-blackext-webfont.svg#univers-black-extended') format('svg');
+  font-family: 'univers-extra-black-extended';
+  src: url('fonts/univers-extrablackext-webfont.woff2') format('woff2'),
+       url('fonts/univers-extrablackext-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

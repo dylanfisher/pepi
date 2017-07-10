@@ -4,7 +4,7 @@
 
 // Font stacks
 $font-stack__regular : 'univers-extended', sans-serif;
-$font-stack__heavy : 'univers-black-extended', sans-serif;
+$font-stack__heavy : 'univers-extra-black-extended', sans-serif;
 
 ///////////////////////////////////////////////////
 // Typography definitions
@@ -16,10 +16,22 @@ $font-stack__heavy : 'univers-black-extended', sans-serif;
   font-size:      22px;
   line-height:    1.4;
   letter-spacing: 0;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.75);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 
   @include breakpoint(sm) {
     font-size: 32px;
+  }
+}
+
+@mixin font--regular-body-copy {
+  font-family: $font-stack__regular;
+  font-size:      16px;
+  line-height:    1.4;
+  letter-spacing: 0;
+  text-shadow: none;
+
+  @include breakpoint(sm) {
+    font-size: 24px;
   }
 }
 
@@ -28,7 +40,7 @@ $font-stack__heavy : 'univers-black-extended', sans-serif;
   font-size:      22px;
   line-height:    1.4;
   letter-spacing: 0;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.75);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 
   @include breakpoint(sm) {
     font-size: 32px;
@@ -41,7 +53,7 @@ $font-stack__heavy : 'univers-black-extended', sans-serif;
   font-size:      32px;
   line-height:    1.1;
   letter-spacing: 0;
-  text-shadow: 0 0 20px $white;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
 
   @include breakpoint(sm) {
     font-size: 50px;
@@ -53,7 +65,7 @@ $font-stack__heavy : 'univers-black-extended', sans-serif;
   font-size:      32px;
   line-height:    1.1;
   letter-spacing: 0;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.75);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
 
   @include breakpoint(sm) {
     font-size: 50px;

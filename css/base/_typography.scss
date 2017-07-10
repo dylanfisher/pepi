@@ -1,5 +1,6 @@
 html {
   text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 
   @include breakpoint(sm) {
     text-rendering: geometricPrecision;

@@ -50,7 +50,7 @@
     <?php endif; ?>
     <div class="contact-info">
       <div class="contact-info__close">
-        <div class="contact-info__close-button">&times;</div>
+        <div class="contact-info__close-button close-button">&times;</div>
       </div>
       <ul>
         <li class="link-set__item link-set__item--primary">
@@ -68,14 +68,31 @@
       <div class="contact-info__links">
         <?php if ( have_rows( 'contact_links', 'option' ) ): ?>
           <?php while ( have_rows( 'contact_links', 'option' ) ): the_row(); ?>
-            <a href="<?php the_sub_field( 'url' ); ?>" class="contact-info__links__link blank-link">
-              <?php the_sub_field( 'label' ); ?>
-            </a>
+            <a href="<?php the_sub_field( 'url' ); ?>" class="contact-info__links__link default-link"><?php the_sub_field( 'label' ); ?></a>
           <?php endwhile; ?>
         <?php endif; ?>
       </div>
     </div>
   </li>
 </ul>
+
+<?php
+  $args = array(
+    'post_type' => array( 'news_item' ),
+    'posts_per_page' => 4,
+    'order' => 'desc'
+  );
+
+  $the_query = new WP_Query( $args );
+
+  if ( $the_query->have_posts() ) :
+    echo '<div class="news-items">';
+      while ( $the_query->have_posts() ) : $the_query->the_post();
+        get_template_part( 'partials/news_item' );
+      endwhile;
+    echo '</div>';
+  endif;
+  wp_reset_postdata();
+?>
 
 <div class="active-media-wrapper" id="active-media-wrapper"></div>

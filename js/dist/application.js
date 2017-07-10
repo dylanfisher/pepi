@@ -803,7 +803,7 @@ $.fn.random = function() {
   return this.eq( Math.floor( Math.random() * this.length ) );
 };
 
-$(document).on('click', '.link-set__item--contact', function() {
+$(document).on('click', '.link-set__item--contact .link-set__item__title', function() {
   var $contact = $('.contact-info');
 
   if ( $contact.hasClass('transitioning') ) {
