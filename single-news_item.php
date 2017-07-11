@@ -1,4 +1,4 @@
-<a href="<?php echo get_home_url(); ?>" rel="home" class="close-button single-post-close-button">&times;</a>
+<a href="<?php echo site_url( '/news' ); ?>" rel="home" class="close-button single-post-close-button">&times;</a>
 
 <div class="link-set__item link-set__item--primary">
   <h2 class="link-set__item__title">

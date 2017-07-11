@@ -74,25 +74,14 @@
       </div>
     </div>
   </li>
+
+  <li class="link-set__item link-set__item--single">
+    <a href="<?php echo site_url( '/news' ); ?>" class="blank-link">
+      <span class="link-set__item__title">
+        News
+      </span>
+    </a>
+  </li>
 </ul>
-
-<?php
-  $args = array(
-    'post_type' => array( 'news_item' ),
-    'posts_per_page' => 4,
-    'order' => 'desc'
-  );
-
-  $the_query = new WP_Query( $args );
-
-  if ( $the_query->have_posts() ) :
-    echo '<div class="news-items">';
-      while ( $the_query->have_posts() ) : $the_query->the_post();
-        get_template_part( 'partials/news_item' );
-      endwhile;
-    echo '</div>';
-  endif;
-  wp_reset_postdata();
-?>
 
 <div class="active-media-wrapper" id="active-media-wrapper"></div>
