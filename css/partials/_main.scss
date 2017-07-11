@@ -50,6 +50,15 @@ html {
 }
 
 .link-set__item--single {
+  & > .link-set__item__title {
+    &:after {
+      content: none;
+      margin: 0;
+    }
+  }
+}
+
+.link-set__item--news {
   .link-set__item__title {
     &:after {
       content: none;

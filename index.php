@@ -75,7 +75,7 @@
     </div>
   </li>
 
-  <li class="link-set__item link-set__item--single">
+  <li class="link-set__item link-set__item--single link-set__item--news">
     <a href="<?php echo site_url( '/news' ); ?>" class="blank-link">
       <span class="link-set__item__title">
         News
